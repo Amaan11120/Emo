@@ -122,7 +122,7 @@ class EmoKeyboardService : InputMethodService() {
     val ei = currentInputEditorInfo
     val a = ei.imeOptions and EditorInfo.IME_MASK_ACTION
     if (a != EditorInfo.IME_ACTION_NONE && a != EditorInfo.IME_ACTION_UNSPECIFIED &&
-      (ei.imeOptions and EditorInfo.IME_FLAG_NO_ENTER_ACTION) == 0) performEditorAction(a)
+      (ei.imeOptions and EditorInfo.IME_FLAG_NO_ENTER_ACTION) == 0) currentInputConnection?.performEditorAction(a)
     else sendDownUpKeyEvents(KeyEvent.KEYCODE_ENTER)
   }
 
