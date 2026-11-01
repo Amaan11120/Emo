@@ -14,4 +14,5 @@ dependencies {
   implementation("androidx.compose.ui:ui")
   implementation("androidx.activity:activity-compose:1.9.0")
   implementation("androidx.recyclerview:recyclerview:1.3.2")
+  implementation("androidx.emoji2:emoji2-bundled:1.5.0")
 }
